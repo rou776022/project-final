@@ -1,0 +1,101 @@
+doctype html
+html(lang="en")
+  head
+    //- pug 才能用 include，有先後順序
+    include includes/_config.pug
+    include includes/_head.pug
+    
+    //- 網頁描述
+    meta(property="og:description" content=description)
+    meta(name="description" content=description)
+    meta(property="og:title" content=title)
+    title #{title}
+  body
+    include includes/_navbar.pug
+
+    header.l-header(data-aos="fade")
+      .swiper.l-header__swiper
+        .swiper-wrapper
+          .swiper-slide.l-header__slide
+            .l-header__img-mask
+              img.u-object-fit(src="img/banner/banner-img01.jpg" alt=title)
+          .swiper-slide.l-header__slide
+            .l-header__img-mask
+              img.u-object-fit(src="img/banner/banner-img02.jpg" alt=title)
+          .swiper-slide.l-header__slide
+            .l-header__img-mask
+              img.u-object-fit(src="img/banner/banner-img03.jpg" alt=title)
+
+    section.l-about
+      .container.--narrow
+        .o-title.--slash.u-mb-40
+          h2.u-title-md.u-ff-en.u-fw-700 ABOUT
+        p 建築設計規劃/室內設計規劃/室內裝修施工/老屋整修規劃/品牌整合設計
+
+    section.l-news.u-pl-0
+      .container-fluid.u-pl-0.l-news__container
+        .row 
+          .col-xl-7.col-md-10
+            .l-news__img-mask
+              img.u-object-fit(src="img/news/news02.jpg", alt="老屋改造")
+          .col-xl-5.col-md-10.l-news__content-wrap
+            .l-news__content
+              .o-title.--dot.u-mb-40
+                h2.u-title-md.u-ff-en.u-fw-700 NEWS
+              h3.u-text-md Revival / XR Design
+              p.u-mt-20 修繕乘載著40年回憶的老屋，打通空間並保留原屋的記憶及材質。拆除的過程中保留了原有材質並結合在大門立面部分為蛇紋石，延續屋主對於家的記憶。也保留空間中、原有的弧線，將此弧線貫穿至整體設計，帶入天、地、壁，整合流動感置入整體，讓空間產生循環，而不只是單一的行徑路線。
+
+    section.l-services 
+      .container-fluid
+        .o-title.--dot.u-mb-40
+          h2.u-title-md.u-ff-en.u-fw-700 SERVICES
+        .l-services__box
+          .l-services__wrap
+            a(href="service.html#qwe") 
+              .l-services__img-mask
+                img.u-object-fit.--abs(src="img/banner/banner-img03.jpg" alt=title)
+              .l-services__text
+                p.u-mt-10 建築設計規劃
+          .l-services__wrap
+            a(href="service.html#qwe") 
+              .l-services__img-mask
+                img.u-object-fit.--abs(src="img/banner/banner-img03.jpg" alt=title)
+              .l-services__text
+                p.u-mt-10 室內設計規劃
+          .l-services__wrap
+            a(href="service.html#qwe") 
+              .l-services__img-mask
+                img.u-object-fit.--abs(src="img/banner/banner-img03.jpg" alt=title)
+              .l-services__text
+                p.u-mt-10 室內裝修施工
+          .l-services__wrap
+            a(href="service.html#qwe") 
+              .l-services__img-mask
+                img.u-object-fit.--abs(src="img/banner/banner-img03.jpg" alt=title)
+              .l-services__text
+                p.u-mt-10 老屋整修規劃
+          .l-services__wrap
+            a(href="service.html#qwe") 
+              .l-services__img-mask
+                img.u-object-fit.--abs(src="img/banner/banner-img03.jpg" alt=title)
+              .l-services__text
+                p.u-mt-10 品牌整合設計
+          
+
+    section.l-projects 
+      .container-fluid.u-pl-0 
+        .o-title.--line.u-mb-40
+          h2.u-title-md.u-ff-en.u-fw-700 PROJECTS
+        .l-projects__box 
+          .l-projects__content-wrap 
+            .l-projects__content
+          .l-projects__img-mask 
+            img.u-object-fit(src="img/banner/banner-img02.jpg" alt=projects)
+          
+        
+
+    include includes/_footer.pug      
+
+
+    script(src="js/swiper-bundle.min.js")
+    include includes/_scripts.pug

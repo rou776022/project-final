@@ -1,0 +1,59 @@
+nav.l-navbar
+  a.l-navbar__logo-wrap(href="index.html")
+    //- img(src="img/logo/LOGO.png", alt="炘銳室內裝修設計")
+    img(src="img/logo/logo_text.jpg", alt="炘銳室內裝修設計")
+
+  .o-burger.l-navbar__burger(onclick="toggleBurger()")
+    .o-burger__wrap
+      .o-burger__line
+      .o-burger__line
+      .o-burger__line
+
+  mixin icons
+    ul.l-navbar__btn-box.--icon
+      li.l-navbar__btn-wrap
+        a.l-navbar__btn.--icon(href="https://www.behance.net/XR_Design" target="_blank")
+          i.fab.fa-behance.u-icon
+      li.l-navbar__btn-wrap
+        a.l-navbar__btn.--icon(href="https://www.facebook.com/WAO.XR.Design" target="_blank")
+          i.fab.fa-facebook.u-icon
+      li.l-navbar__btn-wrap
+        a.l-navbar__btn.--icon(href="https://www.instagram.com/xinrui_design_xr/" target="_blank")
+          i.fab.fa-instagram.u-icon
+      li.l-navbar__btn-wrap
+        a.l-navbar__btn.--icon(href="https://www.youtube.com/@Xinrui0898" target="_blank")
+          i.fab.fa-youtube.u-icon
+
+
+  .l-navbar__icons
+    +icons
+
+  .l-navbar__body
+    .l-navbar__menu
+      ul.l-navbar__btn-box
+        li.l-navbar__btn-wrap
+          a.l-navbar__btn(href="index.html")
+            span.u-ff-en.u-text-lg HOME
+            span.u-text-sm 首頁
+        li.l-navbar__btn-wrap
+          a.l-navbar__btn(href="##")
+            span.u-ff-en.u-text-lg ABOUT
+            span.u-text-sm 關於炘銳
+        li.l-navbar__btn-wrap
+          a.l-navbar__btn(href="##")
+            span.u-ff-en.u-text-lg NEWS
+            span.u-text-sm 最新文章
+        li.l-navbar__btn-wrap
+          a.l-navbar__btn(href="##")
+            span.u-ff-en.u-text-lg SERVICES
+            span.u-text-sm 服務項目
+        li.l-navbar__btn-wrap
+          a.l-navbar__btn(href="##")
+            span.u-ff-en.u-text-lg PROJECTS
+            span.u-text-sm 專案介紹
+        li.l-navbar__btn-wrap
+          a.l-navbar__btn(href="map.html")
+            span.u-ff-en.u-text-lg CONTACT
+            span.u-text-sm 聯絡方式
+
+      +icons

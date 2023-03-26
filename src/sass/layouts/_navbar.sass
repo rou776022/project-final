@@ -1,0 +1,121 @@
+.l-navbar
+  display: flex
+  align-items: center
+  position: fixed
+  width: 100%
+  left: 0
+  top: 0
+  padding: 0 4vw
+  border-bottom: 1px solid $color-gray-light
+  background-color: $color-white
+  z-index: 99999
+  &__logo-wrap
+    max-width: 20rem
+  &__burger
+    display: none
+  &__icons
+    position: fixed
+    left: 50%
+    transform: translateX(-50%)
+    bottom: 0
+  &__icons &__btn-box
+    display: flex !important
+  &__body
+    margin-left: auto
+  &__menu
+    display: flex
+  &__btn-box
+    display: flex
+    &.--icon
+      display: none
+  &__btn-wrap:not(:first-child) &__btn
+    border-left: 1px solid $color-gray-mid
+  // &__btn-wrap.--icon
+  //   background-color: $color-white
+  //   border-radius: 1000rem
+  &__btn
+    text-align: center
+    padding: 0 2vw
+    margin: 2rem 0
+    line-height: 1.2
+    color: $color-gray70
+    z-index: 10
+    transition: color 0.3s 
+    &:hover
+      color: $color-gray-mid60 !important
+    &:active
+      color: $color-primary !important 
+    &.--icon
+      align-items: center
+      height: 30%
+      padding-left: 1vw
+      padding-right: 1vw
+      color: $color-primary80
+      border: none !important
+      transition: 0.1s
+      &:hover
+        color: $color-gray-mid !important
+      &:active
+        color: $color-primary !important 
+
+  +media(xxl)
+    &__btn
+      padding-left: 2.4vw
+      padding-right: 2.4vw
+
+  +media(xl)
+    padding: 2rem 4vw
+    // burger mode
+    &__burger
+      display: block
+      margin-left: auto
+    &__body
+      position: fixed
+      left: 0
+      top: 0
+      +size(100%, 0)
+      margin-top: 0
+      background-color: $color-gray-light80
+      overflow: hidden
+      transition: height 0.6s 0.6s
+    &__menu
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      width: 100%
+      min-height: 100%
+      transform: translateY(-1rem)
+      padding: 5rem 0
+      transition: transform 0.7s, opacity 0.7s
+      opacity: 0
+    &__btn-box.--icon
+      display: flex
+      margin-top: 4rem
+    &.is-opened &
+      &__body
+        height: 100vh
+        transition: 0.7s
+      &__menu
+        transform: translateY(0)
+        opacity: 1
+        transition: transform 0.7s 0.7s, opacity 0.7s 0.7s
+
+  +media(sm)
+    &__btn-box
+      &:not(.--icon)
+        display: flex
+        flex-direction: column
+      &.--icon
+        margin-top: 3rem
+    &__btn
+      margin: 0
+      padding: 2rem 4vw
+      text-align: center
+      border-left: none !important
+
+
+  +media(xs)
+    padding: 1.2rem 6vw
+    &__logo-wrap
+      max-width: 14rem

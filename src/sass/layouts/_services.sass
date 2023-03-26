@@ -1,0 +1,35 @@
+.l-services
+  text-align: center
+  &__box
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin: 0 -1.5vw
+  &__wrap
+    width: 20%
+    padding: 0 1.5vw
+    // flex-direction: column
+    // &:not(:first-child)
+    //   margin-left: 7rem
+  &__img-mask
+    padding-bottom: 100%
+    background: $color-gray-light
+    border-radius: 1rem
+    overflow: hidden
+  +media(xl)
+    &__wrap
+      width: 26%
+  +media(md)
+    &__wrap
+      width: 33.33333%
+  +media(sm)
+    &__wrap
+      width: 40%
+  +media(xs)
+    &__wrap
+      width: 50%
+
+
+
+
+

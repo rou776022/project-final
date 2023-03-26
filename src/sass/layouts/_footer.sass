@@ -1,0 +1,19 @@
+.l-footer
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin: 1rem 2vw
+  padding: 2rem 4vw 7rem
+  border-top: 1px solid $color-gray-mid60
+  // background-color: $color-primary
+  // border-radius: 2rem
+  &__icon-box
+    +size(2rem)
+    &::after
+      content: ''
+      position: absolute
+      +size(5vw, 1px)
+      background-color: $color-gray-mid
+      left: 50%
+      transform: translateX(-50%) 
+      bottom: 0

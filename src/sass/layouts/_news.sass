@@ -1,0 +1,50 @@
+.l-news
+  &__container::before
+    display: block
+    content: ''
+    position: absolute
+    +size(100%, 90%)
+    left: -1px
+    top: -5rem
+    border: 1px solid $color-gray70
+    border-radius: 0 7rem 0 0
+  &__img-mask
+    height: 100%
+    min-height: 55rem
+    margin-right: 6vw
+    border-radius: 0 8rem 8rem 0
+    overflow: hidden
+
+  &__content-wrap
+    display: flex
+    justify-content: center
+    align-items: top
+    padding-top: 10rem
+    max-width: 32vw
+    text-align: justify
+    
+  +media(xxl)
+    &__content-wrap
+      padding-top: 5vh
+
+
+  +media(lg)
+    &__container::before
+      height: 60%
+    &__img-mask
+      margin-right: 0
+      min-height: 0
+    &__content-wrap
+      padding-top: 6rem
+      padding-left: 8vw
+      // margin-top: var(--space-40)
+      max-width: 100rem
+
+  +media(md)
+    &__container::before
+      height: 50%
+    &__img-mask
+      border-radius: 0 6rem 6rem 0
+  +media(sm)
+    &__container::before
+      width: calc(100% + 2vw)
